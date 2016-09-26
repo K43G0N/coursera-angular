@@ -30,13 +30,13 @@ function AlreadyBoughtShoppingController(ShoppingListCheckOffService) {
 
 function ShoppingListCheckOffService() {
    var service = this;
-   var maxItems = 5;
    var itemsToBuy = [
      { name: "aspirina", quantity: "10" },
      { name: "cookies", quantity: "8" },
      { name: "coca-cola", quantity: "5" },
      { name: "pepto bismol", quantity: "2" },
-     { name: "chocolate", quantity: "9" }
+     { name: "chocolate", quantity: "9" },
+     { name: "big mac", quantity: "1" } 
    ];
    var boughtItems = [];
 
@@ -57,6 +57,7 @@ function ShoppingListCheckOffService() {
      return boughtItems;
    };
    service.getMessage = function (index) {
+     var maxItems = service.getItemsToBuy().length;
      if (index == 1)
        return (service.getBoughtItems().length > maxItems-1)
     if (index == 2)
