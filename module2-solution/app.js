@@ -15,7 +15,7 @@ function ToBuyShoppingController(ShoppingListCheckOffService) {
   toBuyList.buyItem = function (index) {
     ShoppingListCheckOffService.addItemToBoughtItems(index);
     ShoppingListCheckOffService.removeItemFromToBuyItems(index);
-    toBuyList.message = ShoppingListCheckOffService.getMessage(1);
+    //toBuyList.message = ShoppingListCheckOffService.getMessage(1);
   };
 }
 
@@ -23,9 +23,9 @@ AlreadyBoughtShoppingController.$inject = ['ShoppingListCheckOffService'];
 function AlreadyBoughtShoppingController(ShoppingListCheckOffService) {
   var boughtList = this;
   boughtList.items = ShoppingListCheckOffService.getBoughtItems();
-  boughtList.message = function () {
-    return ShoppingListCheckOffService.getMessage(2);
-  };
+  //boughtList.message = function () {
+  //  return ShoppingListCheckOffService.getMessage(2);
+  //};
 }
 
 function ShoppingListCheckOffService() {
@@ -36,19 +36,16 @@ function ShoppingListCheckOffService() {
      { name: "coca-cola", quantity: "5" },
      { name: "pepto bismol", quantity: "2" },
      { name: "chocolate", quantity: "9" },
-     { name: "big mac", quantity: "1" } 
    ];
    var boughtItems = [];
 
    service.addItemToBoughtItems = function (index) {
      var countBroughtItems = "";
      var countItemToBuy = "";
-     if (boughtItems.indexOf(itemsToBuy[index]) == -1) {
-       boughtItems.push(itemsToBuy[index]);
-     }
+     boughtItems.push(itemsToBuy[index]);
    };
    service.removeItemFromToBuyItems = function (index) {
-     itemsToBuy.slice(0).splice(index,1);
+     itemsToBuy.splice(index,1);
    };
    service.getItemsToBuy = function () {
      return itemsToBuy;
@@ -61,7 +58,7 @@ function ShoppingListCheckOffService() {
      if (index == 1)
        return (service.getBoughtItems().length > maxItems-1)
     if (index == 2)
-      return (service.getBoughtItems().length == 0);
+       return (service.getBoughtItems().length == 0);
    };
 }
 })();
