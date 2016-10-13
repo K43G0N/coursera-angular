@@ -19,14 +19,14 @@
       <button class="btn btn-primary" ng-click="ctrl.run();">Narrow It Down For Me!</button>
     </div>
 
-    <!-- Bonus loader (see Bonus section of the assignment) -->
-    <items-loader-indicator></items-loader-indicator>
-    <!-- found-items should be implemented as a component -->
-    <!-- <found-items found-items="" on-remove=""></found-items> -->
-    </br></br></br>
-    <ul>
-      <found-items found-items="ctrl.founItems" on-remove="ctrl.removeItems"></found-items>
-    </ul>
+    <div id="items">
+      <!-- Bonus loader (see Bonus section of the assignment) -->
+      <items-loader-indicator></items-loader-indicator>
+      <!-- found-items should be implemented as a component -->
+      <found-items found-items="ctrl.foundItems"
+                   on-remove="ctrl.removeItem(index)">
+      </found-items>
+    </div>
    </div>
 </body>
 </html>

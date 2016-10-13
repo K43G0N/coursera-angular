@@ -1,4 +1,4 @@
-<li ng-repeat="item in ctrl.found">
-  <show-item></show-item>
-  <button ng-click="ctrl.removeItem($index);">Don't want this one!</button>
+<li ng-repeat="item in ctrl.foundItems">
+  {{ item.name }},{{ item.short_name}}
+  <button ng-click="ctrl.onRemove({index:$index})">Don't want this one!</button>
 </li>
