@@ -38,7 +38,6 @@ function MenuItemsDirectiveController(MenuSearchService){
 NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController(MenuSearchService) {
   var me = this;
-  me.errorMessage="";
 
   me.run = function(){
     var promise  = MenuSearchService.getMatchedMenuItems(me.item);
