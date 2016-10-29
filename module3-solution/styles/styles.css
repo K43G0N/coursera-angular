@@ -53,5 +53,9 @@ input[type="text"] {
 
 #items {
   float: left;
-  margin-left: 10px
+  margin-left: 10px;
+}
+.error {
+  color: red;
+  font-weight: bold;
 }

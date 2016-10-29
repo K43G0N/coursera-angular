@@ -1,4 +1,5 @@
 <li ng-repeat="item in ctrl.foundItems">
-  {{ item.name }},{{ item.short_name}}
   <button ng-click="ctrl.onRemove({index:$index})">Don't want this one!</button>
+  {{ item.name }},{{ item.short_name}},{{item.description}}
 </li>
+<div class="error" ng-if="ctrl.itemInList()">Nothing Found</div>
