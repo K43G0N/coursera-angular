@@ -1,0 +1,11 @@
+User first name: {{$ctrl.userInfo.firstname}}<br />
+User Last name: {{$ctrl.userInfo.lastname}}<br />
+User email: {{$ctrl.userInfo.email}}<br />
+User phone: {{$ctrl.userInfo.phone}}<br />
+<br />
+favorite Dish Image:
+<div>
+  <img class="img-responsive" width="250" height="150" ng-src="{{$ctrl.apiPath}}/images/{{$ctrl.favoriteDish.short_name}}.jpg" alt="{{$ctrl.favoriteDish.name}}" />
+</div>
+favorite Dish: {{$ctrl.favoriteDish.name}} <br>
+favorite Dish Description: {{$ctrl.favoriteDish.description}}<br />

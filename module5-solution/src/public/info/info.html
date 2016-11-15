@@ -1,0 +1,2 @@
+<user-info ng-if="ctrlInfo.userExist()" user-info="ctrlInfo.userInfo" favorite-dish="ctrlInfo.favoriteDish" api-path="ctrlInfo.apiPath"></user-info>
+<span ng-if="!ctrlInfo.userExist()">Not Signed Up Yet <a ui-sref="public.login">Sign up Now!</a></span> 
